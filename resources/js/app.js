@@ -1,20 +1,19 @@
 
 $("document").ready(function(){
 
-    $("#searchContainer").hide();
+  console.log("before searchContainerID hide");
 
-    $("#newCard").on("click", function(){
-        $(".repoCards").hide();
-        $("#searchContainer").show();
-        // Need User, Repo, and Branch from GitHub (maybe have branch default to Master?)
+  $("#searchContainerID").hide();
+
+  console.log("after searchContainerID hide");
+
+  $("#newCard").on("click", function(){
+    $(".repoCards").hide();
+    $("#searchContainerID").show();
+    console.log("after searchContainerID show inside the newCard click event");
+    // Need User, Repo, and Branch from GitHub (maybe have branch default to Master?)
     }); // end of newCard click event
 
-
-
-
-
-
-}); // end of document.ready
 // Test Data
 let avatar_urlTest = 'https://avatars1.githubusercontent.com/u/36715261?v=4';
 let usernameTest = 'Testy McTest';
@@ -35,8 +34,8 @@ const config = {
 
   const database = firebase.database();
 
-  // HTML UI elements
-  // test push
+// HTML UI elements
+// test push
 //   database.ref().push({
 //   user: "smh7",
 //   repo: "trains",
@@ -125,6 +124,8 @@ UI.prototype.addUserRepoBranchCardToPage = function(userRepoBranchCard) {
 </div>
   `
 }
+
+}); // end of document.ready
 
 
 
