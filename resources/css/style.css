@@ -1,0 +1,5 @@
+.jumbotron{
+    background-image: url("../../resources/Images/NASA.jpg");
+    background-size: 100% auto;
+    color: white;
+}
